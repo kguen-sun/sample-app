@@ -6,8 +6,7 @@ en:
       vietnamese: "Vietnamese"
   static_pages:
     home:
-      title: "Home"
-      h1_title: "Sample App"
+      title: "Sample App"
       home_html: "This is the home page for the %{href} sample application."
       home_desc: "Ruby on Rails tutorial"
     help:
