@@ -2,13 +2,28 @@ en:
   layouts:
     application:
       title: "Ruby on Rails Tutorial Sample App"
-      english: "English"
-      vietnamese: "Vietnamese"
+    header:
+      logo: "Sample App"
+      nav:
+        home: "Home"
+        help: "Help"
+        login: "Login"
+        language: "Language"
+        english: "English"
+        vietnamese: "Vietnamese"
+    footer:
+      book_author_html: The %{book_href} by %{author_href}
+      book_desc: "Ruby on Rails Tutorial"
+      author_desc: "Michael Hartl"
+      about: "About"
+      contact: "Contact"
+      news: "News"
   static_pages:
     home:
-      title: "Sample App"
+      title: "Welcome to the Sample App"
       home_html: "This is the home page for the %{href} sample application."
       home_desc: "Ruby on Rails tutorial"
+      sign_up: "Sign up now!"
     help:
       title: "Help"
       help_html: |
@@ -34,3 +49,6 @@ en:
         Contact the Ruby on Rails Tutorial about the sample app
         at the %{contact_href}.
       contact_desc: "contact page"
+  users:
+    new:
+      title: Sign Up
