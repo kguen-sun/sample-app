@@ -6,3 +6,8 @@ link:
   learn_enough: "https://www.learnenough.com/"
   screencast: "https://screencasts.railstutorial.org/"
   rails: "https://rubyonrails.org/"
+  author: "https://www.michaelhartl.com/"
+  news: "https://news.railstutorial.org/"
+image:
+  rails:
+    width: "200px"

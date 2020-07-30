@@ -1,0 +1,14 @@
+<footer class="footer">
+  <small>
+    <%= t ".book_author_html",
+      book_href: link_to(t(".book_desc"), Settings.link.home),
+      author_href: link_to(t(".author_desc"), Settings.link.author) %>
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to t(".about"), about_path %></li>
+      <li><%= link_to t(".contact"), contact_path %></li>
+      <li><%= link_to t(".news"), Settings.link.news %></li>
+    </ul>
+  </nav>
+</footer>
