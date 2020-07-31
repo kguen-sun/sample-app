@@ -67,30 +67,32 @@ vi:
   users:
     new:
       title: "Đăng ký"
-      name: "Tên"
-      password: "Mật khẩu"
-      confirmation: "Xác nhận mật khẩu"
       submit: "Tạo tài khoản"
     index:
       title: "Danh sách người dùng"
+    show:
+      flash_not_found: "Không tìm thấy người dùng!"
     create:
-      flash_success: "Chào mừng đến với Ứng dụng mẫu!"
+      flash_created: "Chào mừng đến với Ứng dụng mẫu!"
+      flash_activate: "Làm ơn kiểm tra email để kích hoạt tài khoản của bạn."
     update:
-      flash_success: "Profile đã được cập nhật!"
+      flash_updated: "Profile đã được cập nhật!"
     edit:
       title: "Chỉnh sửa thông tin"
       h1_title: "Cập nhật profile của bạn"
       gravatar_change: "Đổi avatar"
       submit: "Lưu thay đổi"
+    form:
+      name: "Tên"
+      password: "Mật khẩu"
+      confirmation: "Xác nhận mật khẩu"
     destroy:
-      flash_success: "Xóa người dùng thành công!"
+      flash_destroyed: "Xóa người dùng thành công!"
     logged_in_user:
-      flash_danger: "Làm ơn đăng nhập."
+      flash_not_logged_in: "Làm ơn đăng nhập."
     user:
       delete: "Xóa"
       confirm: "Bạn chắc chứ?"
-    load_user:
-      flash_danger: "Không tìm thấy người dùng!"
   sessions:
     new:
       title: "Đăng nhập"
@@ -100,4 +102,16 @@ vi:
       new_user: "Người dùng mới?"
       remember_me: "Nhớ phiên đăng nhập của tôi"
     create:
-      flash_danger: "Email hoặc mật khẩu không hợp lệ."
+      flash_invalid_login: "Email hoặc mật khẩu không hợp lệ."
+  user_mailer:
+    account_activation:
+      subject: "Kích hoạt tài khoản"
+      title: "Ứng dụng Mẫu"
+      greeting: "Xin chào"
+      welcome: |
+        Chào mừng đến với Ứng dụng Mẫu!
+        Nhấn vào link dưới đây để kích hoạt tài khoản của bạn:
+      activate: "Kích hoạt"
+  account_activations:
+    flash_activated: "Tài khoản của bạn đã được kích hoạt!"
+    flash_invalid_activation: "Link kích hoạt không hợp lệ!"

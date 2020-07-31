@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       remember_or_forget user
       redirect_back_or user
     else
-      flash.now[:danger] = t ".flash_danger"
+      flash.now[:danger] = t ".flash_invalid_login"
       render :new
     end
   end
