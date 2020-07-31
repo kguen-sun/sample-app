@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  PERMITTED_PARAMS = %i(name email password password_validation).freeze
+
   validates :name,
             presence: true,
             length: {maximum: Settings.validate.user.name_maxlength}
@@ -14,7 +16,7 @@ class User < ApplicationRecord
             length: {minimum: Settings.validate.user.password_minlength}
 
   has_secure_password
-  
+
   before_save :email_downcase
 
   private

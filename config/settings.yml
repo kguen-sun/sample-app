@@ -8,9 +8,12 @@ link:
   rails: "https://rubyonrails.org/"
   author: "https://www.michaelhartl.com/"
   news: "https://news.railstutorial.org/"
+  gravatar: "https://secure.gravatar.com/avatar/"
 image:
   rails:
     width: "200px"
+  gravatar:
+    size: 80
 validate:
   user:
     name_maxlength: 50
