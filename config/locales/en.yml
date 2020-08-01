@@ -11,6 +11,11 @@ en:
         language: "Language"
         english: "English"
         vietnamese: "Vietnamese"
+        users: "Users"
+        account: "Account"
+        profile: "Profile"
+        settings: "Settings"
+        logout: "Logout"
     footer:
       book_author_html: The %{book_href} by %{author_href}
       book_desc: "Ruby on Rails Tutorial"
@@ -55,9 +60,19 @@ en:
       contact_desc: "contact page"
   users:
     new:
-      title: Sign Up
+      title: "Sign Up"
       name: "Name"
       password: "Password"
       confirmation: "Confirmation"
       submit: "Create my account"
+    create:
       flash_success: "Welcome to the Sample App!"
+  sessions:
+    new:
+      title: "Log in"
+      password: "Password"
+      submit: "Log in"
+      sign_up: "Sign up now!"
+      new_user: "New user?"
+    create:
+      flash_danger: "Invalid email/password combination."
