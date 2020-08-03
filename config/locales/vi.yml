@@ -18,6 +18,10 @@ vi:
       about: "Giới thiệu"
       contact: "Liên hệ"
       news: "Tin tức"
+  shared:
+    error_messages:
+      alert: "Form chứa"
+      alert_error: "lỗi"
   static_pages:
     home:
       title: "Chào mừng đến với Ứng dụng Ví dụ"
@@ -51,3 +55,8 @@ vi:
   users:
     new:
       title: Đăng ký
+      name: "Tên"
+      password: "Mật khẩu"
+      confirmation: "Xác nhận mật khẩu"
+      submit: "Tạo tài khoản"
+      flash_success: "Chào mừng đến với App ví dụ!"

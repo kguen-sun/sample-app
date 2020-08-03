@@ -18,6 +18,10 @@ en:
       about: "About"
       contact: "Contact"
       news: "News"
+  shared:
+    error_messages:
+      alert: "The form contains"
+      alert_error: "error"
   static_pages:
     home:
       title: "Welcome to the Sample App"
@@ -52,3 +56,8 @@ en:
   users:
     new:
       title: Sign Up
+      name: "Name"
+      password: "Password"
+      confirmation: "Confirmation"
+      submit: "Create my account"
+      flash_success: "Welcome to the Sample App!"
