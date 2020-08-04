@@ -1,9 +1,9 @@
 vi:
   layouts:
     application:
-      title: "Ứng dụng ví dụ về Ruby on Rails"
+      title: "Ứng dụng mẫu sử dụng Ruby on Rails"
     header:
-      logo: "App ví dụ"
+      logo: "Ứng dụng mẫu"
       nav:
         home: "Trang chủ"
         help: "Giúp đỡ"
@@ -11,6 +11,11 @@ vi:
         language: "Ngôn ngữ"
         english: "Tiếng Anh"
         vietnamese: "Tiếng Việt"
+        users: "Người dùng"
+        account: "Tài khoản"
+        profile: "Profile"
+        settings: "Thiết lập"
+        logout: "Đăng xuất"
     footer:
       book_author_html: "%{book_href} bởi %{author_href}"
       book_desc: "Ruby on Rails Tutorial"
@@ -24,15 +29,15 @@ vi:
       alert_error: "lỗi"
   static_pages:
     home:
-      title: "Chào mừng đến với Ứng dụng Ví dụ"
-      home_html: "Đây là trang chủ của ứng dụng ví dụ về %{href}."
+      title: "Chào mừng đến với Ứng dụng Mẫu"
+      home_html: "Đây là trang chủ của ứng dụng mẫu về %{href}."
       home_desc: "Ruby on Rails"
       sign_up: "Đăng kí ngay!"
     help:
       title: "Trợ giúp"
       help_html: |
         Xem trợ giúp về Ruby on Rails Tutorial tại %{help_href}.
-        Xem trợ giúp về ứng dụng ví dụ này ở cuốn %{book_href}.
+        Xem trợ giúp về ứng dụng mẫu này ở cuốn %{book_href}.
       help_desc: "trang trợ giúp của Rails Tutorials"
       book_desc: "Ruby on Rails Tutorial"
     about:
@@ -40,7 +45,7 @@ vi:
       about_html: |
         %{home_href} (một phần của chuỗi các tutorial của %{learn_enough_href}")
         là một %{book_href} và %{screencast_href} hướng dẫn lập trình web 
-        sử dụng %{rails_href}. Đây là ứng dụng ví dụ của tutorial này.
+        sử dụng %{rails_href}. Đây là ứng dụng mẫu của tutorial này.
       home_desc: "Ruby on Rails Tutorial"
       learn_enough_desc: "Learn Enough"
       book_desc: "cuốn sách"
@@ -49,14 +54,24 @@ vi:
     contact:
       title: "Liên hệ"
       contact_html: |
-        Liên hệ đến Ruby on Rails về ứng dụng ví dụ này tại
+        Liên hệ đến Ruby on Rails về ứng dụng mẫu này tại
         %{contact_href}.
       contact_desc: "trang liên hệ"
   users:
     new:
-      title: Đăng ký
+      title: "Đăng ký"
       name: "Tên"
       password: "Mật khẩu"
       confirmation: "Xác nhận mật khẩu"
       submit: "Tạo tài khoản"
-      flash_success: "Chào mừng đến với App ví dụ!"
+    create:
+      flash_success: "Chào mừng đến với Ứng dụng mẫu!"
+  sessions:
+    new:
+      title: "Đăng nhập"
+      password: "Mật khẩu"
+      submit: "Đăng nhập"
+      sign_up: "Đăng ký ngay!"
+      new_user: "Người dùng mới?"
+    create:
+      flash_danger: "Email hoặc mật khẩu không hợp lệ."
