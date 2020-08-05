@@ -9,11 +9,13 @@ link:
   author: "https://www.michaelhartl.com/"
   news: "https://news.railstutorial.org/"
   gravatar: "https://secure.gravatar.com/avatar/"
+  gravatar_change: "https://gravatar.com/emails"
 image:
   rails:
     width: "200px"
   gravatar:
-    size: 80
+    default_size: 80
+    index_size: 50
 validate:
   user:
     name_maxlength: 50
@@ -22,3 +24,5 @@ validate:
     password_minlength: 6
 checkbox_value:
   checked: "1"
+pagination:
+  per_page: 20

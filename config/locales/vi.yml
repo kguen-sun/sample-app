@@ -1,4 +1,11 @@
 vi:
+  views:
+    pagination:
+      first: "Trang đầu"
+      last: "Trang cuối"
+      previous: "Trang trước"
+      next: "Trang sau"
+      truncate: "..."
   layouts:
     application:
       title: "Ứng dụng mẫu sử dụng Ruby on Rails"
@@ -64,8 +71,26 @@ vi:
       password: "Mật khẩu"
       confirmation: "Xác nhận mật khẩu"
       submit: "Tạo tài khoản"
+    index:
+      title: "Danh sách người dùng"
     create:
       flash_success: "Chào mừng đến với Ứng dụng mẫu!"
+    update:
+      flash_success: "Profile đã được cập nhật!"
+    edit:
+      title: "Chỉnh sửa thông tin"
+      h1_title: "Cập nhật profile của bạn"
+      gravatar_change: "Đổi avatar"
+      submit: "Lưu thay đổi"
+    destroy:
+      flash_success: "Xóa người dùng thành công!"
+    logged_in_user:
+      flash_danger: "Làm ơn đăng nhập."
+    user:
+      delete: "Xóa"
+      confirm: "Bạn chắc chứ?"
+    load_user:
+      flash_danger: "Không tìm thấy người dùng!"
   sessions:
     new:
       title: "Đăng nhập"

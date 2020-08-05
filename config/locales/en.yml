@@ -1,4 +1,11 @@
 en:
+  views:
+    pagination:
+      first: "First"
+      last: "Last"
+      previous: "Previous"
+      next: "Next"
+      truncate: "..."
   layouts:
     application:
       title: "Ruby on Rails Tutorial Sample App"
@@ -65,8 +72,26 @@ en:
       password: "Password"
       confirmation: "Confirmation"
       submit: "Create my account"
+    index:
+      title: "All users"
     create:
       flash_success: "Welcome to the Sample App!"
+    update:
+      flash_success: "Profile updated!"
+    edit:
+      title: "Edit info"
+      h1_title: "Update your profile"
+      gravatar_change: "Change avatar"
+      submit: "Save changes"
+    destroy:
+      flash_success: "User deleted!"
+    logged_in_user:
+      flash_danger: "Please log in."
+    user:
+      delete: "Delete"
+      confirm: "Are you sure?"
+    load_user:
+      flash_danger: "User not found!"
   sessions:
     new:
       title: "Log in"
