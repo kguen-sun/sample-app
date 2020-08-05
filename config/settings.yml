@@ -22,6 +22,7 @@ validate:
     email_maxlength: 255
     email_format: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i'
     password_minlength: 6
+    password_reset_expired: 2
 checkbox_value:
   checked: "1"
 pagination:
