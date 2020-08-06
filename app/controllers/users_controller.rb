@@ -1,14 +1,19 @@
 class UsersController < ApplicationController
-  before_action :load_user_with_params_id, only: %i(show edit destroy)
-  before_action :logged_in_user, only: %i(index edit update destroy)
+  before_action :load_exists_user, only: %i(show edit destroy)
+  before_action :logged_in_user, except: %i(show new create)
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.page(params[:page]).per Settings.pagination.per_page
+    @users = User.is_activated.page params[:page]
   end
 
-  def show; end
+  def show
+    return if @user.activated
+
+    flash[:danger] = t ".flash_not_found"
+    redirect_to root_url
+  end
 
   def new
     @user = User.new
@@ -18,9 +23,9 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      log_in @user
-      flash[:success] = t ".flash_success"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t ".flash_activate"
+      redirect_to root_url
     else
       render :new
     end
@@ -30,7 +35,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update user_params
-      flash[:success] = t ".flash_success"
+      flash[:success] = t ".flash_updated"
       redirect_to @user
     else
       render :edit
@@ -39,7 +44,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    flash[:success] = t ".flash_success"
+    flash[:success] = t ".flash_destroyed"
     redirect_to users_url
   end
 
@@ -53,7 +58,7 @@ class UsersController < ApplicationController
     return if logged_in?
 
     store_location
-    flash[:danger] = t "users.logged_in_user.flash_danger"
+    flash[:danger] = t "users.logged_in_user.flash_not_logged_in"
     redirect_to login_url
   end
 
@@ -65,11 +70,11 @@ class UsersController < ApplicationController
     redirect_to root_url unless current_user.admin?
   end
 
-  def load_user_with_params_id
+  def load_exists_user
     @user = User.find_by id: params[:id]
     return if @user.present?
 
-    flash[:danger] = t "users.load_user.flash_danger"
+    flash[:danger] = t "users.show.flash_not_found"
     redirect_to root_url
   end
 end

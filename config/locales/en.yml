@@ -68,30 +68,32 @@ en:
   users:
     new:
       title: "Sign Up"
-      name: "Name"
-      password: "Password"
-      confirmation: "Confirmation"
       submit: "Create my account"
     index:
       title: "All users"
+    show:
+      flash_not_found: "User not found!"
     create:
-      flash_success: "Welcome to the Sample App!"
+      flash_created: "Welcome to the Sample App!"
+      flash_activate: "Please check your email to activate your account."
     update:
-      flash_success: "Profile updated!"
+      flash_updated: "Profile updated!"
     edit:
       title: "Edit info"
       h1_title: "Update your profile"
       gravatar_change: "Change avatar"
       submit: "Save changes"
+    form:
+      name: "Name"
+      password: "Password"
+      confirmation: "Confirmation"
     destroy:
-      flash_success: "User deleted!"
+      flash_destroyed: "User deleted!"
     logged_in_user:
-      flash_danger: "Please log in."
+      flash_not_logged_in: "Please log in."
     user:
       delete: "Delete"
       confirm: "Are you sure?"
-    load_user:
-      flash_danger: "User not found!"
   sessions:
     new:
       title: "Log in"
@@ -101,4 +103,16 @@ en:
       new_user: "New user?"
       remember_me: "Remember me"
     create:
-      flash_danger: "Invalid email/password combination."
+      flash_invalid_login: "Invalid email/password combination."
+  user_mailer:
+    account_activation:
+      subject: "Account activation"
+      title: "Sample App"
+      greeting: "Hi"
+      welcome: |
+        Welcome to the Sample App!
+        Click on the link below to activate your account:
+      activate: "Activate"
+  account_activations:
+    flash_activated: "Account activated!"
+    flash_invalid_activation: "Invalid activation link!"
