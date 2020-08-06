@@ -9,10 +9,14 @@ class UsersController < ApplicationController
   end
 
   def show
-    return if @user.activated
-
-    flash[:danger] = t ".flash_not_found"
-    redirect_to root_url
+    if @user.activated
+      @microposts = @user.microposts
+                         .order_by_created_at_desc
+                         .page params[:page]
+    else
+      flash[:danger] = t ".flash_not_found"
+      redirect_to root_url
+    end
   end
 
   def new
@@ -52,14 +56,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit User::PERMITTED_PARAMS
-  end
-
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t "users.logged_in_user.flash_not_logged_in"
-    redirect_to login_url
   end
 
   def correct_user

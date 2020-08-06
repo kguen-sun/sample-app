@@ -9,12 +9,13 @@ require("@rails/activestorage").start()
 require("channels")
 
 var jQuery = require("jquery")
-
-// import jQuery from "jquery"
 global.$ = global.jQuery = jQuery
 window.$ = window.jQuery = jQuery
 
+global.I18n = require("i18n-js");
+
 require("bootstrap")
+require("./image-size-validation")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)

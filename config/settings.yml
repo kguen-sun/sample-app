@@ -16,6 +16,8 @@ image:
   gravatar:
     default_size: 80
     index_size: 50
+  micropost:
+    size_limit: 500
 validate:
   user:
     name_maxlength: 50
@@ -23,6 +25,10 @@ validate:
     email_format: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i'
     password_minlength: 6
     password_reset_expired: 2
+  micropost:
+    image_content_type: <%= %w(image/jpeg image/gif image/png) %>
+    image_content_type_form: "image/jpeg,image/gif,image/png"
+    image_maxsize: 5
 checkbox_value:
   checked: "1"
 pagination:

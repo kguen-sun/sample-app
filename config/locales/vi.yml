@@ -1,4 +1,13 @@
 vi:
+  activerecord:
+    attributes:
+      user:
+        name: "Tên"
+        password: "Mật khẩu"
+        password_confirmation: "Mật khẩu"
+      micropost:
+        content: "Nội dung bài đăng"
+        image: "Ảnh"
   views:
     pagination:
       first: "Trang đầu"
@@ -34,12 +43,20 @@ vi:
     error_messages:
       alert: "Form chứa"
       alert_error: "lỗi"
+    user_info:
+      view_profile: "Xem profile"
+      micropost: "bài đăng"
+    micropost_form:
+      placeholder: "Viết bài đăng mới..."
+      submit: "Đăng bài"
   static_pages:
-    home:
+    home_unauth:
       title: "Chào mừng đến với Ứng dụng Mẫu"
       home_html: "Đây là trang chủ của ứng dụng mẫu về %{href}."
       home_desc: "Ruby on Rails"
       sign_up: "Đăng kí ngay!"
+    home_auth:
+      feed: "Các bài đăng"
     help:
       title: "Trợ giúp"
       help_html: |
@@ -71,6 +88,7 @@ vi:
     index:
       title: "Danh sách người dùng"
     show:
+      microposts: "Bài đăng"
       flash_not_found: "Không tìm thấy người dùng!"
     create:
       flash_created: "Chào mừng đến với Ứng dụng mẫu!"
@@ -145,3 +163,19 @@ vi:
       flash_reset_success: "Mật khẩu của bạn đã được đặt lại!"
     check_expiration:
       flash_expired: "Link đặt lại mật khẩu đã hết hạn!"
+  microposts:
+    micropost:
+      posted: "Đã đăng"
+      ago: "trước"
+      delete: "Xóa"
+      confirm: "Bạn chắc chứ?"
+    create:
+      flash_created: "Đăng bài thành công!"
+    destroy:
+      flash_destroyed: "Xóa bài đăng thành công!"
+      flash_wrong_user: "Không được phép xóa bài đăng của người dùng khác!"
+    validate:
+      image_format: "phải có định dạng hợp lệ"
+      image_size: "không được có độ lớn vượt quá %{size}MB"
+    alert:
+      image_size: "Kích thước file tối đa là %{size}MB. Làm ơn chọn file có kích thước nhỏ hơn."
