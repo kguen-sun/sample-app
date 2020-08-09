@@ -15,7 +15,8 @@ image:
     width: "200px"
   gravatar:
     default_size: 80
-    index_size: 50
+    index_size: 60
+    follow_size: 40
   micropost:
     size_limit: 500
 validate:
