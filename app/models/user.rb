@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :microposts, dependent: :destroy
+
   PERMITTED_PARAMS = %i(name email password password_confirmation).freeze
 
   attr_accessor :remember_token, :activation_token, :reset_token
@@ -80,6 +82,10 @@ class User < ApplicationRecord
   def create_reset_digest
     self.reset_token = User.new_token
     update reset_digest: User.digest(reset_token), reset_sent_at: Time.zone.now
+  end
+
+  def feed
+    microposts
   end
 
   private

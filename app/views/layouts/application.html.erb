@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= full_title yield(:title) %> </title>
+    <title><%= full_title yield(:title) %></title>
     <%= render "layouts/rails_default" %>
     <%= render "layouts/shim" %>
   </head>
@@ -18,4 +18,9 @@
       <%= debug(params) if Rails.env.development? %>
     </div>
   </body>
+  <script>
+    I18n.locale = "<%= I18n.locale %>";
+    I18n.translations = <%= raw I18n::JS.filtered_translations.to_json %>;
+    var image_maxsize = "<%= Settings.validate.micropost.image_maxsize %>";
+  </script>
 </html>

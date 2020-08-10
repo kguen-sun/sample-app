@@ -1,4 +1,13 @@
 en:
+  activerecord:
+    attributes:
+      user:
+        name: "Name"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+      micropost:
+        content: "Content"
+        image: "Image"
   views:
     pagination:
       first: "First"
@@ -34,12 +43,20 @@ en:
     error_messages:
       alert: "The form contains"
       alert_error: "error"
+    user_info:
+      view_profile: "View profile"
+      micropost: "micropost"
+    micropost_form:
+      placeholder: "Compose new micropost..."
+      submit: "Post"
   static_pages:
-    home:
+    home_unauth:
       title: "Welcome to the Sample App"
       home_html: "This is the home page for the %{href} sample application."
       home_desc: "Ruby on Rails tutorial"
       sign_up: "Sign up now!"
+    home_auth:
+      feed: "Micropost feed"
     help:
       title: "Help"
       help_html: |
@@ -72,6 +89,7 @@ en:
     index:
       title: "All users"
     show:
+      microposts: "Microposts"
       flash_not_found: "User not found!"
     create:
       flash_created: "Welcome to the Sample App!"
@@ -146,3 +164,19 @@ en:
       flash_invalid: "User is invalid!"
     check_expiration:
       flash_expired: "Password reset link has expired!"
+  microposts:
+    micropost:
+      posted: "Posted"
+      ago: "ago"
+      delete: "Delete"
+      confirm: "Are you sure?"
+    create:
+      flash_created: "Micropost created!"
+    destroy:
+      flash_destroyed: "Micropost deleted!"
+      flash_wrong_user: "Delete another user's micropost is not allowed!"
+    validate:
+      image_format: "must be a valid image format"
+      image_size: "should be less than %{size}MB"
+    alert:
+      image_size: Maximum file size is %{size}MB. Please choose a smaller file.
