@@ -3,6 +3,14 @@ class ApplicationController < ActionController::Base
 
   before_action :set_locale
 
+  def get_user
+    @user = User.find_by id: params[:id]
+    return if @user
+
+    flash[:danger] = t "users.get_user.flash_not_found"
+    redirect_to root_url
+  end
+
   def logged_in_user
     return if logged_in?
 

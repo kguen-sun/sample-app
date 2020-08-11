@@ -23,6 +23,7 @@ class Micropost < ApplicationRecord
   paginates_per Settings.pagination.per_page
 
   scope :order_by_created_at_desc, ->{order created_at: :desc}
+  scope :users_feed, ->(ids){where user_id: ids}
 
   def display_image
     size_limit = Settings.image.micropost.size_limit

@@ -49,6 +49,9 @@ vi:
     micropost_form:
       placeholder: "Viết bài đăng mới..."
       submit: "Đăng bài"
+    stats:
+      following: "theo dõi"
+      followers: "người đang theo dõi"
   static_pages:
     home_unauth:
       title: "Chào mừng đến với Ứng dụng Mẫu"
@@ -89,7 +92,6 @@ vi:
       title: "Danh sách người dùng"
     show:
       microposts: "Bài đăng"
-      flash_not_found: "Không tìm thấy người dùng!"
     create:
       flash_created: "Chào mừng đến với Ứng dụng mẫu!"
       flash_activate: "Làm ơn kiểm tra email để kích hoạt tài khoản của bạn."
@@ -108,9 +110,15 @@ vi:
       flash_destroyed: "Xóa người dùng thành công!"
     logged_in_user:
       flash_not_logged_in: "Làm ơn đăng nhập."
+    get_user:
+      flash_not_found: "Không tìm thấy người dùng!"
     user:
       delete: "Xóa"
       confirm: "Bạn chắc chứ?"
+    follow:
+      follow: "Theo dõi"
+    unfollow:
+      unfollow: "Bỏ theo dõi"
   sessions:
     new:
       title: "Đăng nhập"
@@ -179,3 +187,9 @@ vi:
       image_size: "không được có độ lớn vượt quá %{size}MB"
     alert:
       image_size: "Kích thước file tối đa là %{size}MB. Làm ơn chọn file có kích thước nhỏ hơn."
+  following:
+    index:
+      title: "Đang theo dõi"
+  followers:
+    index:
+      title: "Người theo dõi"

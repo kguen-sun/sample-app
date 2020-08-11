@@ -281,6 +281,9 @@ Layout/IndentFirstHashElement:
     - special_inside_parentheses
     - consistent
 
+Style/Lambda:
+  EnforcedStyle: literal
+
 Style/LambdaCall:
   EnforcedStyle: call
   SupportedStyles:
@@ -554,6 +557,9 @@ Rails/HelperInstanceVariable:
 Rails/ReadWriteAttribute:
   Include:
     - app/models/**/*.rb
+
+Rails/ReflectionClassName:
+  Enabled: false
 
 Rails/ScopeArgs:
   Include:

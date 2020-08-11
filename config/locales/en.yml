@@ -49,6 +49,9 @@ en:
     micropost_form:
       placeholder: "Compose new micropost..."
       submit: "Post"
+    stats:
+      following: "following"
+      followers: "followers"
   static_pages:
     home_unauth:
       title: "Welcome to the Sample App"
@@ -90,7 +93,6 @@ en:
       title: "All users"
     show:
       microposts: "Microposts"
-      flash_not_found: "User not found!"
     create:
       flash_created: "Welcome to the Sample App!"
       flash_activate: "Please check your email to activate your account."
@@ -109,9 +111,15 @@ en:
       flash_destroyed: "User deleted!"
     logged_in_user:
       flash_not_logged_in: "Please log in."
+    get_user:
+      flash_not_found: "User not found!"
     user:
       delete: "Delete"
       confirm: "Are you sure?"
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
   sessions:
     new:
       title: "Log in"
@@ -180,3 +188,9 @@ en:
       image_size: "should be less than %{size}MB"
     alert:
       image_size: Maximum file size is %{size}MB. Please choose a smaller file.
+  following:
+    index:
+      title: "Following"
+  followers:
+    index:
+      title: "Followers"

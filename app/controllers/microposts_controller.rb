@@ -8,6 +8,7 @@ class MicropostsController < ApplicationController
       flash[:success] = t ".flash_created"
       redirect_to root_url
     else
+      @user = current_user
       @feed_items = current_user.feed
                                 .order_by_created_at_desc
                                 .page params[:page]

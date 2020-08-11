@@ -1,5 +1,15 @@
 class User < ApplicationRecord
   has_many :microposts, dependent: :destroy
+  has_many :active_relationships, class_name: Relationship.name,
+                                  foreign_key: :follower_id,
+                                  dependent: :destroy,
+                                  inverse_of: :follower
+  has_many :passive_relationships, class_name: Relationship.name,
+                                   foreign_key: :followed_id,
+                                   dependent: :destroy,
+                                   inverse_of: :followed
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships
 
   PERMITTED_PARAMS = %i(name email password password_confirmation).freeze
 
@@ -67,6 +77,10 @@ class User < ApplicationRecord
     reset_sent_at < Settings.validate.user.password_reset_expired.hours.ago
   end
 
+  def following? other_user
+    following.include? other_user
+  end
+
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
   end
@@ -85,7 +99,15 @@ class User < ApplicationRecord
   end
 
   def feed
-    microposts
+    Micropost.users_feed following_ids << id
+  end
+
+  def follow other_user
+    following << other_user
+  end
+
+  def unfollow other_user
+    following.delete other_user
   end
 
   private
